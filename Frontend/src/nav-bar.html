@@ -1,0 +1,17 @@
+
+<template>
+  <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand"><i class="fa fa-home"></i>&nbsp;<span>${router.title}</span></a>
+    </div>
+    <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}"><a href.bind="row.href" show.bind="row.title === 'Login' ? !$parent.isUserLoggedIn : $parent.isUserLoggedIn">${row.title}</a></li>
+      </ul>
+      <p if.bind="isUserLoggedIn" class="navbar-text pull-right"><span>${userName}</span>&nbsp;<a href="#" title="Logout" click.delegate="logout()"><i class="fa fa-arrow-circle-o-right fa-lg"></i></a></p>
+      <ul class="nav navbar-nav navbar-right">
+        <li if.bind="router.isNavigating" class="loader"><i class="fa fa-spinner fa-spin fa-2x"></i></li>
+      </ul>
+    </div>
+  </nav>
+</template>

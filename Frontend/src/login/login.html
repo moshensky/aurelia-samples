@@ -1,0 +1,17 @@
+
+<template>
+  <section>
+    <h2>${'login.systemLogin' | t}</h2>
+    <form role="form" submit.delegate="login()" validate.bind="validation">
+      <div class="form-group">
+        <label for="fn">${'login.user' | t}</label>
+        <input type="text" value.bind="email" id="fn" placeholder="${'login.user' | t}" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label for="ln">${'login.password' | t}</label>
+        <input type="password" value.bind="password" id="ln" placeholder="${'login.password' | t}" class="form-control"/>
+      </div>
+      <button type="submit" disabled.bind="!validation.result.isValid" class="btn btn-default">${'login.login' | t}</button>
+    </form>
+  </section>
+</template>

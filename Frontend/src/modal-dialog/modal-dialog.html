@@ -1,0 +1,15 @@
+
+<!--
+Created by moshensky on 6/29/15.
+
+-->
+<template>
+  <modal showing.bind="showing">
+    <modal-header title="Name Goes Here" close.call="closeEventGoesHere()"></modal-header>
+    <modal-body content-view.bind="view-model-name-goes-here" content-model.bind="model-name-goes-here"></modal-body>
+    <modal-footer>
+      <button click.trigger="someFunctionGoesHere()" class="btn">Save</button>
+      <au-button text="Cancel" click.call="someFunctionGoesHere()"></au-button>
+    </modal-footer>
+  </modal>
+</template>

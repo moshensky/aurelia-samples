@@ -1,0 +1,82 @@
+template
+  section
+    br
+    div.panel.panel-primary
+      div.panel-heading
+        h4 ${'requests.requests' | t}
+      div.panel-body
+        form
+          div.row
+            div.form-group.col-lg-4
+              label ${'requests.requestState' | t}
+              select.form-control(value.bind="requestStateId")
+                option(value="") ${'common.all' | t}
+                option(repeat.for="requestState of requestStates" value="${requestState.id}") ${requestState.name}
+            div.form-group.col-lg-4
+              label ${'requests.requestType' | t}
+              select-two(caption="${'common.all' | t}" items.one-way="requestTypes" value.two-way="requestTypeId" change.trigger="requestTypeChange(requestTypeId)")
+            div.form-group.col-lg-4
+              label ${'requests.category' | t}
+              select.form-control(value.bind="categoryId")
+                option(value='') ${'common.all' | t}
+                option(repeat.for="category of categories" value="${category.id}") ${category.name}
+            div.form-group.col-lg-4
+              label ${'requests.speciality' | t}
+              select.form-control(value.bind="specialityId")
+                option(value='') ${'common.all' | t}
+                option(repeat.for="speciality of specialities" value="${speciality.id}") ${speciality.name}
+            div.form-group.col-lg-4
+              label ${'requests.course' | t}
+              select.form-control(value.bind="course")
+                option(value='') ${'common.all' | t}
+                option(repeat.for="course of courses" value="${course.id}") ${course.name}
+            div.form-group.col-lg-4
+              label ${'requests.facultyNumber' | t}
+              input.form-control(type="text" value.bind="facultyNumber")
+          div.row
+            div.form-group.col-lg-12
+              button.btn.btn-default(click.trigger="filter()")
+                i.fa.fa-search
+                | &nbsp
+                span ${'common.filter' | t}
+      table.table.table-hover(if.bind="requests.length > 0")
+        thead
+          tr
+            th.col-sm-2 ${'requests.fullName' | t}
+            th.col-sm-1 ${'requests.requestType' | t}
+            th.col-sm-1 ${'requests.category' | t}
+            th.col-sm-1 ${'requests.facultyNumber' | t}
+            th.col-sm-1 ${'requests.course' | t}
+            th.col-sm-1 ${'requests.speciality' | t}
+            th.col-sm-1 ${'requests.assessment' | t}
+            th.col-sm-2 ${'requests.waitingReason' | t}
+            th.col-sm-1 ${'requests.requestState' | t}
+            th.col-sm-1
+        tbody
+          tr(repeat.for="request of requests")
+            td 
+              span ${request.fullName}
+            td 
+              span ${request.requestType}
+            td 
+              span ${request.category}
+            td 
+              span ${request.facultyNumber}
+            td 
+              span ${request.course}
+            td 
+              span ${request.speciality}
+            td 
+              span ${request.assessment}
+            td 
+              span ${request.waitingReasons}
+            td 
+              span ${request.requestState}
+            td
+              a.btn.btn-default(href="#/request/${request.id}/edit")
+                i.fa.fa-pencil.fa-lg
+      div.panel-footer
+        a.form-control.btn.btn-default(href="#/request/create")
+          i.fa.fa-plus
+          | &nbsp;
+          label ${'common.add' | t }
