@@ -1,12 +1,12 @@
 
 <template>
   <section><br/>
-    <compose view="../../modal-dialog/modal-dialog.html"></compose>
-    <button click.trigger="showMessage()" class="form-control btn btn-default">
+    <compose view="../../modal-dialog-view/custom-dialog.html"></compose>
+    <button click.trigger="showCustomDialog()" class="form-control btn btn-default">
       <label>Show Message</label>
     </button>
-    <compose view="../../modal-dialog/confirm-modal-dialog.html"></compose>
-    <button click.trigger="showConfirm()" class="form-control btn btn-default">
+    <compose view="../../modal-dialog-view/confirm.html"></compose>
+    <button click.trigger="showConfirmDialog()" class="form-control btn btn-default">
       <label>Show Confirm</label>
     </button>
   </section>

@@ -1,11 +1,11 @@
 template
   section
     br
-    compose(view="../../modal-dialog/modal-dialog.html")
-    button.form-control.btn.btn-default(click.trigger="showMessage()")
+    compose(view="../../modal-dialog-view/custom-dialog.html")
+    button.form-control.btn.btn-default(click.trigger="showCustomDialog()")
       label Show Message
 
 
-    compose(view="../../modal-dialog/confirm-modal-dialog.html")
-    button.form-control.btn.btn-default(click.trigger="showConfirm()")
+    compose(view="../../modal-dialog-view/confirm.html")
+    button.form-control.btn.btn-default(click.trigger="showConfirmDialog()")
       label Show Confirm

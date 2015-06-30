@@ -1,0 +1,14 @@
+
+<!--
+Created by moshensky on 6/29/15.
+
+-->
+<template>
+  <modal showing.bind="customDialogShowing" options.bind="{ backdrop: 'static' }">
+    <modal-header title="Name Goes Here" close.call="onMessageCloseClick()"></modal-header>
+    <modal-body content-view.bind="view-model-name-goes-here" content-model.bind="model-name-goes-here"></modal-body>
+    <modal-footer>
+      <button click.trigger="onMessageCloseClick()" class="btn">Ok</button>
+    </modal-footer>
+  </modal>
+</template>
