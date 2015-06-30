@@ -17,11 +17,13 @@ export class NavBar {
   }
 
   get isUserLoggedIn() {
-    return this.session.isLoggedIn === true;
+    //return this.session.isLoggedIn === true;
+    return true;
   }
 
   get userName() {
-    return this.session.userName;
+    //return this.session.userName;
+    return 'Kosta';
   }
 
   logout() {

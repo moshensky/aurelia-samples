@@ -221,6 +221,9 @@ System.config({
     "github:twbs/bootstrap@3.3.4": {
       "jquery": "github:components/jquery@2.1.4"
     },
+    "github:twitter/typeahead.js@0.11.1": {
+      "jquery": "github:components/jquery@2.1.4"
+    },
     "github:zewa666/aurelia-i18next@master": {
       "Intl.js": "github:andyearnshaw/Intl.js@0.1.4",
       "aurelia-event-aggregator": "github:aurelia/event-aggregator@0.4.0",

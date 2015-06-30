@@ -7,7 +7,7 @@ export function configure(aurelia) {
     .standardConfiguration()
     .developmentLogging()
     .plugin('aurelia-animator-css')
-    .plugin('aurelia-bs-modal')
+    //.plugin('aurelia-bs-modal')
     .plugin('aurelia-validation', (config) => {
       config.useLocale('bg-BG');
     })
@@ -37,6 +37,12 @@ export function configure(aurelia) {
         useCookie: false
       });
     });
+
+  aurelia.globalizeResources('./bs-modal/modal');
+  aurelia.globalizeResources('./bs-modal/modal-header');
+  aurelia.globalizeResources('./bs-modal/modal-body');
+  aurelia.globalizeResources('./bs-modal/modal-footer');
+  aurelia.globalizeResources('./bs-modal/au-button');
 
   aurelia.start().then(a => a.setRoot());
 }

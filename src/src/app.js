@@ -24,7 +24,7 @@ export class App {
   configureRouter(config, router) {
     // todo: translate
     config.title = 'Dorms!';
-    config.addPipelineStep('authorize', RolesAuthorizeStep);
+    //config.addPipelineStep('authorize', RolesAuthorizeStep);
     //config.options.pushState = true;
     config.map([{
       route: ['', routes.login],
