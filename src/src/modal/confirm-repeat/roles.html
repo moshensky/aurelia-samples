@@ -1,0 +1,34 @@
+
+<template> 
+  <section>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4>${heading}</h4>
+      </div>
+      <table if.bind="roles.length &gt; 0" class="table table-hover">
+        <thead>
+          <tr>
+            <th class="col-sm-9">Name</th>
+            <th class="col-sm-2"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr repeat.for="role of roles">
+            <td validate.bind="role.validation" class="form-group">
+              <input type="text" value.bind="role.name" validate="name" enable.bind="role.isInEditMode" class="form-control"/>
+            </td>
+            <td class="text-right">
+              <button click.trigger="$parent.save(role)" if.bind="role.isInEditMode" class="btn btn-success"><i class="fa fa-save fa-lg"></i></button>
+              <button click.trigger="$parent.cancel(role)" if.bind="role.isInEditMode" class="btn btn-default"><i class="fa fa-times fa-lg"></i></button>
+              <button click.trigger="role.setEditMode(true)" if.bind="!role.isInEditMode" class="btn btn-default"><i class="fa fa-pencil fa-lg"></i></button>
+              <button click.trigger="$parent.remove(role)" if.bind="role.id" class="btn btn-danger"><i class="fa fa-trash-o fa-lg"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="panel-footer">
+        <button click.trigger="add()" class="form-control btn btn-default"><i class="fa fa-plus"></i>&nbsp;<span>New</span></button>
+      </div>
+    </div>
+  </section>
+</template>

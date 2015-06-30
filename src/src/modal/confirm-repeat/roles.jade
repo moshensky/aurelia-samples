@@ -1,0 +1,31 @@
+﻿template 
+  section
+    div.panel.panel-primary
+      div.panel-heading
+        h4 ${heading}
+
+      table.table.table-hover(if.bind="roles.length > 0")
+        thead
+          tr
+            th.col-sm-9 Name
+            th.col-sm-2
+        tbody
+          tr(repeat.for="role of roles")
+            td.form-group(validate.bind = "role.validation")
+                input.form-control(type="text" value.bind="role.name" validate="name" enable.bind="role.isInEditMode")
+            td.text-right
+              button.btn.btn-success(click.trigger="$parent.save(role)" if.bind="role.isInEditMode")
+                i.fa.fa-save.fa-lg
+              button.btn.btn-default(click.trigger="$parent.cancel(role)" if.bind="role.isInEditMode")
+                i.fa.fa-times.fa-lg
+              button.btn.btn-default(click.trigger="role.setEditMode(true)" if.bind="!role.isInEditMode")
+                i.fa.fa-pencil.fa-lg
+              button.btn.btn-danger(click.trigger="$parent.remove(role)" if.bind="role.id")
+                i.fa.fa-trash-o.fa-lg
+
+      div.panel-footer
+        button.form-control.btn.btn-default(click.trigger="add()")
+          i.fa.fa-plus
+          | &nbsp;
+          span New
+

@@ -19,7 +19,7 @@ System.config({
     "CodeSeven/toastr": "github:CodeSeven/toastr@2.1.1",
     "aurelia-animator-css": "github:aurelia/animator-css@0.3.2",
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.13.1",
-    "aurelia-custom-common-files": "github:moshensky/aurelia-custom-common-files@0.1.0",
+    "aurelia-custom-common-files": "github:moshensky/aurelia-custom-common-files@0.1.2",
     "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
     "aurelia-framework": "github:aurelia/framework@0.12.0",
     "aurelia-http-client": "github:aurelia/http-client@0.9.1",
@@ -200,6 +200,15 @@ System.config({
       "jquery": "github:components/jquery@2.1.4"
     },
     "github:moshensky/aurelia-custom-common-files@0.1.0": {
+      "Eonasdan/bootstrap-datetimepicker": "github:Eonasdan/bootstrap-datetimepicker@4.14.30",
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
+      "aurelia-framework": "github:aurelia/framework@0.12.0",
+      "aurelia-validation": "github:aurelia/validation@0.2.6",
+      "jquery": "github:components/jquery@2.1.4",
+      "moment": "github:moment/moment@2.10.3",
+      "select2/select2": "github:select2/select2@4.0.0"
+    },
+    "github:moshensky/aurelia-custom-common-files@0.1.2": {
       "Eonasdan/bootstrap-datetimepicker": "github:Eonasdan/bootstrap-datetimepicker@4.14.30",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
       "aurelia-framework": "github:aurelia/framework@0.12.0",

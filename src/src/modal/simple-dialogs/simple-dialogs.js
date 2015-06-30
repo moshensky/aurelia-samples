@@ -17,4 +17,10 @@ export class SimpleDialogs {
     this.confirmDialogShowing = false;
     console.log('on confirm "cancel" click')
   }
+
+  showCustomDialog() {
+    this.customDialogShowing = true;
+    console.log('show custom');
+
+  }
 }
