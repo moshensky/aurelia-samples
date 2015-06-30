@@ -19,7 +19,6 @@ System.config({
     "CodeSeven/toastr": "github:CodeSeven/toastr@2.1.1",
     "aurelia-animator-css": "github:aurelia/animator-css@0.3.2",
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.13.1",
-    "aurelia-bs-modal": "github:pwkad/aurelia-bs-modal@0.2.0",
     "aurelia-custom-common-files": "github:moshensky/aurelia-custom-common-files@0.1.0",
     "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
     "aurelia-framework": "github:aurelia/framework@0.12.0",
@@ -208,11 +207,6 @@ System.config({
       "jquery": "github:components/jquery@2.1.4",
       "moment": "github:moment/moment@2.10.3",
       "select2/select2": "github:select2/select2@4.0.0"
-    },
-    "github:pwkad/aurelia-bs-modal@0.2.0": {
-      "aurelia-bs-modal": "github:pwkad/aurelia-bs-modal@master",
-      "babel": "npm:babel-core@5.6.15",
-      "jquery": "github:components/jquery@2.1.4"
     },
     "github:pwkad/aurelia-bs-modal@master": {
       "aurelia-bs-modal": "github:pwkad/aurelia-bs-modal@master",

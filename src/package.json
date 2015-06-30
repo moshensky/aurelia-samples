@@ -54,7 +54,6 @@
     "dependencies": {
       "aurelia-animator-css": "github:aurelia/animator-css@^0.3.0",
       "aurelia-bootstrapper": "github:aurelia/bootstrapper@^0.13.0",
-      "aurelia-bs-modal": "github:pwkad/aurelia-bs-modal@^0.2.0",
       "aurelia-custom-common-files": "github:moshensky/aurelia-custom-common-files@^0.1.0",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.8.1",
       "aurelia-framework": "github:aurelia/framework@^0.12.0",
