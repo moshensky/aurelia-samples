@@ -5,14 +5,14 @@ import $ from 'jquery';
 @inject(Element)
 export class Modal {
   @bindable showing = false;
+  @bindable options = {};
+
   constructor(element) {
     this.element = element;
   }
   attached(){
-    $(this.modal).modal({
-      show: false,
-      backdrop: 'static'
-    });
+    let options = Object.assign({ show: false }, this.options);
+    $(this.modal).modal(options);
   }
   showingChanged(newValue){
     if (newValue) {

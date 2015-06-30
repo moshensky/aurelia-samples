@@ -35,6 +35,7 @@ System.config({
     "font-awesome": "npm:font-awesome@4.3.0",
     "jquery": "github:components/jquery@2.1.4",
     "moment": "github:moment/moment@2.10.3",
+    "moshensky/aurelia-bs-modal": "github:moshensky/aurelia-bs-modal@master",
     "petkaantonov/bluebird": "github:petkaantonov/bluebird@2.9.27",
     "service": "github:moshensky/aurelia-auth-session@0.1.1",
     "twitter/typeahead.js": "github:twitter/typeahead.js@0.11.1",
@@ -192,6 +193,11 @@ System.config({
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
       "aurelia-http-client": "github:aurelia/http-client@0.9.1",
       "aurelia-router": "github:aurelia/router@0.9.0",
+      "jquery": "github:components/jquery@2.1.4"
+    },
+    "github:moshensky/aurelia-bs-modal@master": {
+      "aurelia-bs-modal": "github:pwkad/aurelia-bs-modal@master",
+      "babel": "npm:babel-core@5.6.15",
       "jquery": "github:components/jquery@2.1.4"
     },
     "github:moshensky/aurelia-custom-common-files@0.1.0": {
