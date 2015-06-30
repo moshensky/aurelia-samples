@@ -1,11 +1,8 @@
 ﻿template
     script(src="jspm_packages/github/petkaantonov/bluebird@2.9.27/js/browser/bluebird.js")
     require(from='./nav-bar')
-    require(from='./modal-dialog/modal-dialog')
 
     nav-bar(router.bind="router")
 
     div.page-host(style="background: white;")
         router-view
-
-    modal-dialog

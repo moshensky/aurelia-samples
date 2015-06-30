@@ -2,10 +2,8 @@
 <template>
   <script src="jspm_packages/github/petkaantonov/bluebird@2.9.27/js/browser/bluebird.js"></script>
   <require from="./nav-bar"></require>
-  <require from="./modal-dialog/modal-dialog"></require>
   <nav-bar router.bind="router"></nav-bar>
   <div style="background: white;" class="page-host">
     <router-view></router-view>
   </div>
-  <modal-dialog></modal-dialog>
 </template>
